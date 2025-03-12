@@ -14,7 +14,6 @@ function Map({ navigation }) {
   };
 
   function selectLocationHandler(event) {
-    console.log(event);
     const lat = event.nativeEvent.coordinate.latitude;
     const lng = event.nativeEvent.coordinate.longitude;
 
@@ -33,7 +32,7 @@ function Map({ navigation }) {
       return;
     }
 
-    navigation.navigate("AddPlace", {
+    navigation.popTo("AddPlace", {
       pickedLat: selectedLocation.lat,
       pickedLng: selectedLocation.lng,
     });
