@@ -5,3 +5,15 @@ export function getMapPreview(lat, lng) {
 `;
   return imagePreviewUrl;
 }
+
+export async function getAddress(lat, lng) {
+  const response = await fetch(
+    `https://api.geoapify.com/v1/geocode/reverse?lat=${lat}&lon=${lng}&apiKey=${GEOAPIFY_API_KEY}`
+  );
+  if (!response.ok) {
+    throw new Error("Failed to fetch address!");
+  }
+  const data = await response.json();
+  const address = data.features[0].properties.formatted;
+  return address;
+}
