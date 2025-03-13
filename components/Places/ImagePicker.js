@@ -5,8 +5,8 @@ import {
 } from "expo-image-picker";
 import { useState } from "react";
 import { Alert, Button, Image, StyleSheet, View, Text } from "react-native";
-import { Colors } from "../../constants.js/color";
 import OutlinedButton from "../Ui/OutlinedButton";
+import { Colors } from "../../constants/colors";
 
 function ImagePicker({ onTakeImage }) {
   const [pickedImage, setPickedImage] = useState();

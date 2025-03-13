@@ -12,8 +12,8 @@ import {
 import { useEffect, useState } from "react";
 
 import OutlinedButton from "../Ui/OutlinedButton";
-import { Colors } from "../../constants.js/color";
 import { getAddress, getMapPreview } from "../../util/location";
+import { Colors } from "../../constants/colors";
 
 function LocationPicker({ onPickLocation }) {
   const [pickedLocation, setPickedLocation] = useState();
